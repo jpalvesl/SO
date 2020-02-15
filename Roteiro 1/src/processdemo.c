@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <unistd.h>
 
 const clock_t MAXDELAY = 2000000;
 int x = 50;   /* a global variable */
@@ -21,7 +23,7 @@ void adjustX(char * legend, int i) {
    }
 }
 
-main()
+int main()
 {  int c;
    srand(time(NULL));
    printf("creating  new process:\n");
@@ -31,4 +33,5 @@ main()
       adjustX("child", 1);    /* child process */
    else
       adjustX("parent", -1);  /* parent process */
+    return 1;
 }

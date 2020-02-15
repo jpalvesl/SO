@@ -25,7 +25,7 @@ void * adjustX(void *n)
    return(n);
 }
 
-main()
+int main()
 {  int a;
    srand(time(NULL));
    pthread_t  up_thread, dn_thread;
@@ -39,4 +39,5 @@ main()
 
    while (1) /* loop forever */
    { ;} 
+    return 1;
 }
