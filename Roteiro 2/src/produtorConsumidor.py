@@ -34,8 +34,8 @@ def productor():
             mutex.notify_all()
             pass
 
-        sleep(1)
         mutex.release()
+        sleep(1)
 
 
 
