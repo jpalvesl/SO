@@ -15,7 +15,7 @@ def add1000():
     print('Shared data: {}'.format(shared_data))
     j = shared_data
     sleep(2)
-    shared_data += 1000;
+    shared_data = j + 1000;
     mutex.release() # Release mutex lock
     print("1000 added!");
     sys.exit()
