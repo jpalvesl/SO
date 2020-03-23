@@ -6,6 +6,7 @@ LIMITE = 5
 full = 0
 empty = LIMITE
 
+# semaforo
 mutex = Condition()
 
 # Produtor
@@ -67,7 +68,7 @@ def consumer():
         sleep(2)
 
 
-
+# iniciando as threads
 produtor = Thread(target=productor, args=[])
 produtor.start()
 
