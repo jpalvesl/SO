@@ -15,4 +15,4 @@
 - [x] Existe diferença na velocidade entre eles? se sim quem é mais rápido e porque?
 - [x] Verificar quantos processos existem com "ps xl" 
 - [x] O que acontece se o loop no fim do main for retirado? 
-- [ ] Modifique o programa pra ter o mesmo comportamento do processdemo.c 
+- [x] Modifique o programa pra ter o mesmo comportamento do processdemo.c 
