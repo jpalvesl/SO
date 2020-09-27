@@ -14,7 +14,6 @@
 
 - [x] O que o programa faz? (Explicar cada linhas da saida)
 - [x] Retirar as diretivas `lock` e `unlock` e explicar como o programa funciona
-- [x] 
 
 ## Descrição das funções
 
