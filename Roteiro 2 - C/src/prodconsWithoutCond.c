@@ -7,12 +7,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* Constants */
-# define BUFFER_SIZE 10
-
 /* buffer using a shared integer variable */
 typedef struct {
-  int writeable; /*true/false*/
+  int writeable; /*true/false full/empty buffer */
   int sharedData;
 } buffer;
 
@@ -48,19 +45,15 @@ void delay(int secs) { /*utility function*/
 void *producer(void *n) {
   printf("Starting Producer thread...\n");
 
-  int j=1, actual_buffer, tot=0;
-  while (j <= BUFFER_SIZE) {
+  int j=1;
+  while (j <= 10) {
     if (theBuffer.writeable) continue;
 
-    actual_buffer = theBuffer.sharedData;
-
-    tot += actual_buffer +1;
-    store((actual_buffer + 1), &theBuffer);
-    printf("Stored: %d\n", (actual_buffer + 1));
+    store(j, &theBuffer);
+    printf("Stored: %d\n", j);
      j++;
     delay(rand() % 6);  /* up to 5 sec */
   }
-  printf("--- Stored total = %d ---\n", tot);
   pthread_exit((void *)0);
 }
 
@@ -68,8 +61,8 @@ void *producer(void *n) {
 void *consumer(void *n) {
   printf("Starting Consumer threads...\n");
 
-  int j=0, actual_buffer, tot=0;
-  while (j < BUFFER_SIZE) {
+  int j=0, tot=0;
+  while (j < 10) {
     if (!theBuffer.writeable) continue;
 
     j = retrieve(&theBuffer);
@@ -100,7 +93,6 @@ int main() {
   printf("Join Consumer thread...\n");
   pthread_join(consThread, NULL);
 
-  printf("--- Buffer = %d ---\n", theBuffer.sharedData);
   printf("Exit the program...\n");
   pthread_exit(NULL);
 }
