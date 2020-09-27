@@ -2,29 +2,29 @@
 
 ## Descrição das funções
 
-- [ ] pthread_t
-- [ ] pthread_attr_t
-- [ ] pthread_attr_init
-- [ ] pthread_attr_setdetachstate
-- [ ] pthread_create
-- [ ] pthread_attr_destroy
-- [ ] pthread_join
+- [x] pthread_t
+- [x] pthread_attr_t
+- [x] pthread_attr_init
+- [x] pthread_attr_setdetachstate
+- [x] pthread_create
+- [x] pthread_attr_destroy
+- [x] pthread_join
 
 ## joinEx.c
 
-- [ ] O que o programa faz? (Explicar cada linhas da saida)
-- [ ] Retirar as diretivas `lock` e `unlock` e explicar como o programa funciona
-- [ ] 
+- [x] O que o programa faz? (Explicar cada linhas da saida)
+- [x] Retirar as diretivas `lock` e `unlock` e explicar como o programa funciona
+- [x] 
 
 ## Descrição das funções
 
-- [ ] pthread_mutex_t
-- [ ] pthread_mutex_lock
-- [ ] pthread_mutex_unlock
+- [x] pthread_mutex_t
+- [x] pthread_mutex_lock
+- [x] pthread_mutex_unlock
 
 ## prodconsUnsync.c
 
-- [ ] Qual o tamanho do buffer?
-- [ ] Para que serve a variável writeable dentro do buffer?
-- [ ] Se o programa funcionasse qual seria a sua saída no final?
-- [ ] É muito provável que, após corrigir seu código, às vezes no terminal apareça que um número foi retirado antes de ser armazenado. Investigue e explique por que isso acontece.
+- [x] Qual o tamanho do buffer?
+- [x] Para que serve a variável writeable dentro do buffer?
+- [x] Se o programa funcionasse qual seria a sua saída no final?
+- [x] É muito provável que, após corrigir seu código, às vezes no terminal apareça que um número foi retirado antes de ser armazenado. Investigue e explique por que isso acontece.
